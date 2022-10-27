@@ -3,12 +3,12 @@ import { getFirestore, collection } from "firebase/firestore";
 import "firebase/compat/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyDOnsv7W-sX-fSmH8y-P99hVlKPZVo4Rhc",
-  authDomain: "ultra-funny-party-game.firebaseapp.com",
-  projectId: "ultra-funny-party-game",
-  storageBucket: "ultra-funny-party-game.appspot.com",
-  messagingSenderId: "294300916851",
-  appId: "1:294300916851:web:fcbaec204a4a797f77de06",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
 
 export const db = getFirestore();
