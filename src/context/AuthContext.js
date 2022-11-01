@@ -1,6 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
 
+// useContext hook to maintain login, logout, signup
+// functions and access to AddQuestion
+// and Dashboard components only if authenticated.
+
 const AuthContext = React.createContext();
 
 export function useAuth() {

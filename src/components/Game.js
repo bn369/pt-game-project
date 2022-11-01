@@ -11,6 +11,9 @@ export default function Game() {
   const [showDivs, setShowDivs] = useState(false);
 
   function getQuestions(e) {
+    // This function gets data from firebase
+    // (questions created by users), loops thru it
+    // and pushes into an array named questions.
     e.preventDefault();
     if (questions.length !== 0) {
       return;
@@ -27,6 +30,10 @@ export default function Game() {
     setStart(false);
   }
   function randomQuestion() {
+    // This function draws random element
+    // of questions array to display it
+    // and creates new array without a drawn
+    // element so there is no repetition.
     if (questions.length > 0) {
       let random = questions[Math.floor(Math.random() * questions.length)];
       setRandom(random);

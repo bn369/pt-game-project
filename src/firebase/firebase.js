@@ -15,17 +15,5 @@ export const db = getFirestore();
 
 export const colRef = collection(db, "questions");
 
-// getDocs(colRef)
-//   .then((snapshot) => {
-//     let questions = [];
-//     snapshot.docs.forEach((doc) => {
-//       questions.push({ ...doc.data(), id: doc.id });
-//     });
-//     console.log(questions);
-//   })
-//   .catch((err) => {
-//     console.log(err.message);
-//   });
-
 export const auth = app.auth();
 export default app;

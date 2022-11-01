@@ -5,6 +5,10 @@ import { colRef } from "../firebase/firebase";
 import { addDoc } from "firebase/firestore";
 import { v4 as uuid } from "uuid";
 
+// Logic for user to create a question
+// with two answers.
+// Data is being pushed to firebase firestore.
+
 export default function AddQuestion() {
   const questionRef = useRef();
   const answerARef = useRef();
